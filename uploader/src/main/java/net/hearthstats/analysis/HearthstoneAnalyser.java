@@ -44,7 +44,7 @@ public class HearthstoneAnalyser extends Observable {
     private boolean isYourTurn = true;
     private HearthstoneMatch match = new HearthstoneMatch();
     private String mode;
-    private int deckSlot;
+    private Integer deckSlot;
     private Integer rankLevel;
     private int analyzeRankRetries = 0;
     private int iterationsSinceFindingOpponent = 0;
@@ -105,6 +105,7 @@ public class HearthstoneAnalyser extends Observable {
 
                 case ARENA_LOBBY:
                     setMode("Arena");
+                    resetDeckSlot();
                     testForNewArenaRun(image);
                     break;
 
@@ -262,7 +263,14 @@ public class HearthstoneAnalyser extends Observable {
                 // The deck slot has changed
                 setDeckSlot(newDeckSlot);
             }
+        } else {
+            setDeckSlot(-1);
         }
+    }
+
+    private void resetDeckSlot() {
+        debugLog.debug("Resetting deck slot");
+        setDeckSlot(null);
     }
 
 

@@ -9,9 +9,9 @@ public class HearthstoneMatch {
 	private String _opponentClass;
 	private boolean _coin = false;
 	private String _result;
-	private int _deckSlot;
+	private Integer _deckSlot;
 	private String _opponentName;
-	private Integer _rankLeve;
+	private Integer _rankLevel;
 	private int _numTurns = 0;
 	private int _duration;
 	private String _notes;
@@ -20,7 +20,7 @@ public class HearthstoneMatch {
 	public HearthstoneMatch() {
 		
 	}
-	public int getDeckSlot() {
+	public Integer getDeckSlot() {
 		return _deckSlot;
 	}
 	
@@ -76,7 +76,7 @@ public class HearthstoneMatch {
 		_coin = coin;
 	}
 	
-	public void setDeckSlot(int deckSlot) {
+	public void setDeckSlot(Integer deckSlot) {
 		_deckSlot = deckSlot;
 	}
 	
@@ -85,14 +85,14 @@ public class HearthstoneMatch {
 	}
 
 	public Integer getRankLevel() {
-		return _rankLeve;
+		return _rankLevel;
 	}
 	public String getResult() {
 		return _result;
 	}
 
 	public void setRankLevel(Integer rankLevel) {
-		_rankLeve = rankLevel;
+		_rankLevel = rankLevel;
 	}
 	
 	public void setResult(String result) {
